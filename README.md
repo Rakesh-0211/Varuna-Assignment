@@ -56,52 +56,78 @@ Rakesh-0211-fueleu_compliance_platform/
 ├── REFLECTION.md
 │
 ├── backend/
-│   ├── package.json
-│   ├── tsconfig.json
-│   ├── jest.config.js
-│   ├── prisma/
-│   │   └── schema.prisma
-│   ├── scripts/
-│   │   └── seed.js
-│   ├── src/
-│   │   ├── prismaClient.ts
-│   │   ├── adapters/
-│   │   │   ├── inbound/http/
-│   │   │   │   ├── routeController.ts
-│   │   │   │   ├── bankingController.ts
-│   │   │   │   └── poolsController.ts
-│   │   │   └── outbound/prisma/
-│   │   │       ├── RouteRepositoryPrisma.ts
-│   │   │       ├── BankRepositoryPrisma.ts
-│   │   │       └── PoolRepositoryPrisma.ts
-│   │   ├── core/
-│   │   │   ├── domain/entities/Route.ts
-│   │   │   └── application/usecases/
-│   │   │       ├── computeCB.ts
-│   │   │       ├── banking.ts
-│   │   │       └── createPool.ts
-│   │   ├── infrastructure/server/
-│   │   │   ├── app.ts
-│   │   │   └── dev.ts
-│   │   └── shared/constants.ts
-│   └── tests/
-│       ├── unit/
-│       └── integration/
+│ ├── package.json
+│ ├── tsconfig.json
+│ ├── jest.config.js
+│ ├── prisma/
+│ │ └── schema.prisma
+│ ├── scripts/
+│ │ └── seed.js
+│ ├── src/
+│ │ ├── prismaClient.ts
+│ │ ├── adapters/
+│ │ │ ├── inbound/http/
+│ │ │ │ ├── routeController.ts
+│ │ │ │ ├── bankingController.ts
+│ │ │ │ └── poolsController.ts
+│ │ │ └── outbound/prisma/
+│ │ │ ├── RouteRepositoryPrisma.ts
+│ │ │ ├── BankRepositoryPrisma.ts
+│ │ │ └── PoolRepositoryPrisma.ts
+│ │ ├── core/
+│ │ │ ├── domain/entities/Route.ts
+│ │ │ └── application/usecases/
+│ │ │ ├── computeCB.ts
+│ │ │ ├── banking.ts
+│ │ │ └── createPool.ts
+│ │ ├── infrastructure/server/
+│ │ │ ├── app.ts
+│ │ │ └── dev.ts
+│ │ └── shared/constants.ts
+│ └── tests/
+│ ├── unit/
+│ └── integration/
 │
 └── frontend/
-    ├── package.json
-    ├── vite.config.ts
-    ├── tsconfig.json
-    ├── src/
-    │   ├── main.tsx
-    │   ├── App.tsx
-    │   ├── index.css
-    │   ├── components/
-    │   │   └── Sidebar.tsx
-    │   └── pages/
-    │       ├── RoutesPage.tsx
-    │       ├── ComparePage.tsx
-    │       ├── BankingPage.tsx
-    │       ├── PoolingPage.tsx
-    │       └── AdminPage.tsx
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+├── src/
+│ ├── main.tsx
+│ ├── App.tsx
+│ ├── index.css
+│ │
+│ ├── adapters/
+│ │ ├── infrastructure/
+│ │ │ └── fetchHelpers.ts
+│ │ └── ui/
+│ │ ├── components/
+│ │ │ ├── Sidebar.tsx
+│ │ │ ├── Topbar.tsx
+│ │ │ ├── Card.tsx
+│ │ │ └── Table.tsx
+│ │ └── pages/
+│ │ ├── RoutesPage.tsx
+│ │ ├── ComparePage.tsx
+│ │ ├── BankingPage.tsx
+│ │ ├── PoolingPage.tsx
+│ │ └── DashboardPage.tsx
+│ │
+│ ├── core/
+│ │ ├── application/usecases/
+│ │ │ ├── computeCB.ts
+│ │ │ ├── banking.ts
+│ │ │ └── createPool.ts
+│ │ ├── domain/
+│ │ │ ├── Route.ts
+│ │ │ ├── Banking.ts
+│ │ │ └── Pool.ts
+│ │ └── shared/
+│ │ └── constants.ts
+│ │
+│ ├── assets/
+│ │ └── react.svg
+│ ├── AppRouter.tsx
+│ └── App.css
+
 
